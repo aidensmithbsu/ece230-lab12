@@ -40,7 +40,7 @@ The One Hot method was easier for us. Since this method encodes each state as a 
 For example: We output `z=1` when in state `C` or `E`, so `z = C | E`. We can get to state `D`  from state `A`, `B` or `C` when `w=1`, so `D = w & (A | B | C)`.
 
 Binary encoding, on the other hand, required us to solve k-maps for the output and next state logic, resulting in more complex sums of products for each output and next state bit.<br>
-For example: The function for `z` became `z = (~Q2 | Q1 | ~Q0) | (Q2 | ~Q1 | ~Q0)`. There is no single "state D" bit in binary encoding. Instead, "state D" is encoded across all bits
+For example: The function for `z` became `z = (~Q2 & Q1 & ~Q0) | (Q2 & ~Q1 & ~Q0)`. There is no single "state D" bit in binary encoding. Instead, "state D" is encoded across all bits
 as `011`, so the logic to "enter state D" is spread across all bits (which also include logic to enter all the other states), making the functions less human readable. K-maps needed to be used to find optimized functions for each state bit.
 
 ### In what conditions would you have to use one over the other? Think about resource utilization on the FPGA.
