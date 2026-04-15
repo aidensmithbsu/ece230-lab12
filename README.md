@@ -1,4 +1,4 @@
-# Number Theory: Addition
+# Finite State Machine Lab
 
 In this lab, you’ve learned about One Hot and Binary state machines and how to build them.
 
